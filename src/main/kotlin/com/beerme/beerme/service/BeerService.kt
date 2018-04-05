@@ -29,7 +29,7 @@ class BeerService {
         beerRepository.insert(beer)
     }
 
-    fun pesquisarPorRotulo(rotulo: String){
-        beerRepository.findByRotuloContaining(rotulo)
+    fun pesquisarPorRotulo(rotulo: String) : List<Beer>{
+        return beerRepository.findByRotuloContaining(rotulo)
     }
 }

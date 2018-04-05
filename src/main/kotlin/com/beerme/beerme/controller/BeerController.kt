@@ -33,7 +33,7 @@ class BeerController {
     }
 
     @GetMapping("/rotulo/{rotulo}")
-    fun pesquisarPorRotulo(@PathVariable(value = "rotulo") rotulo: String){
-        beerService.pesquisarPorRotulo(rotulo)
+    fun pesquisarPorRotulo(@PathVariable(value = "rotulo") rotulo: String): List<Beer>{
+        return beerService.pesquisarPorRotulo(rotulo)
     }
 }
