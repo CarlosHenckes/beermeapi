@@ -26,4 +26,14 @@ class BeerController {
     fun excluir(@RequestBody beer: Beer){
         beerService.excluir(beer)
     }
+
+    @PutMapping
+    fun atualizar(@RequestBody beer: Beer){
+        beerService.atualizar(beer)
+    }
+
+    @GetMapping("/rotulo/{rotulo}")
+    fun pesquisarPorRotulo(@PathVariable(value = "rotulo") rotulo: String){
+        beerService.pesquisarPorRotulo(rotulo)
+    }
 }

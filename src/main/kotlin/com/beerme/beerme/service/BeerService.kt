@@ -24,4 +24,12 @@ class BeerService {
     fun excluir(beer: Beer){
         beerRepository.delete(beer)
     }
+
+    fun atualizar(beer: Beer){
+        beerRepository.insert(beer)
+    }
+
+    fun pesquisarPorRotulo(rotulo: String){
+        beerRepository.findByRotuloContaining(rotulo)
+    }
 }
