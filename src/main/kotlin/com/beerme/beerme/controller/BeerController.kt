@@ -16,8 +16,6 @@ class BeerController {
 
     @GetMapping
     fun buscarTodos() : List<Beer>{
-        //return beerService.buscarTodasCervejas()
-        val beer: List<Beer> = arrayListOf()
-        return beer
+        return beerService.buscarTodasCervejas()
     }
 }

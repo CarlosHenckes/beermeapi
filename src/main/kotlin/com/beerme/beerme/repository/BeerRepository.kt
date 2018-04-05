@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository
 
 @Repository
 interface BeerRepository: MongoRepository<Beer, String> {
-    fun findByRotulo(rotulo: String): List<Beer>
+    fun findByRotuloContaining(rotulo: String): List<Beer>
 }
