@@ -12,8 +12,8 @@ class BeerService {
     lateinit var beerRepository: BeerRepository
 
     fun buscarTodasCervejas() : List<Beer>{
-        val beer: List<Beer> = arrayListOf()
-        return beer
-        //return beerRepository.findAll()
+        /*val beer: List<Beer> = arrayListOf()
+        return beer*/
+        return beerRepository.findAll()
     }
 }
