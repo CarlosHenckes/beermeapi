@@ -20,4 +20,8 @@ class BeerService {
     fun salvar(beer: Beer){
         beerRepository.save(beer)
     }
+
+    fun excluir(beer: Beer){
+        beerRepository.delete(beer)
+    }
 }

@@ -21,4 +21,9 @@ class BeerController {
     fun salvar(@RequestBody beer: Beer){
         beerService.salvar(beer)
     }
+
+    @DeleteMapping
+    fun excluir(@RequestBody beer: Beer){
+        beerService.excluir(beer)
+    }
 }
