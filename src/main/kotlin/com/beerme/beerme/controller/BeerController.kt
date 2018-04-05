@@ -12,11 +12,13 @@ import service.BeerService
 @RequestMapping("/beer")
 class BeerController {
 
-    @Autowired
-    lateinit var beerService: BeerService
+    /*@Autowired
+    lateinit var beerService: BeerService*/
 
     @GetMapping
     fun buscarTodos() : List<Beer>{
-        return beerService.buscarTodasCervejas()
+        //return beerService.buscarTodasCervejas()
+        val beer: List<Beer> = arrayListOf()
+        return beer
     }
 }
