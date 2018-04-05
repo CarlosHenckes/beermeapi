@@ -16,4 +16,8 @@ class BeerService {
         return beer*/
         return beerRepository.findAll()
     }
+
+    fun salvar(beer: Beer){
+        beerRepository.save(beer)
+    }
 }
