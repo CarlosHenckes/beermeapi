@@ -1,10 +1,10 @@
 package com.beerme.beerme.repository
 
-import com.beerme.beerme.model.Beer
+import com.beerme.beerme.model.User
 import org.springframework.data.mongodb.repository.MongoRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-interface BeerRepository: MongoRepository<Beer, String> {
-    fun findByRotuloContaining(rotulo: String): List<Beer>?
+interface UserRepository: MongoRepository<User, String> {
+    fun findByEmailContaining(email: String): User?
 }
