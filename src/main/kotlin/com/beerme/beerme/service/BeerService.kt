@@ -1,4 +1,4 @@
-package service
+package com.beerme.beerme.service
 
 import com.beerme.beerme.model.Beer
 import com.beerme.beerme.repository.BeerRepository
