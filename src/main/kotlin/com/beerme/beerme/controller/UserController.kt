@@ -16,7 +16,7 @@ class UserController {
 
     @GetMapping("/email/{email}/senha/{senha}")
     fun login(@PathVariable(value = "email") email: String,
-                @PathVariable(value = "senha") senha: String) : Boolean{
+                @PathVariable(value = "senha") senha: String) : String{
         return userService.login(email, senha)
     }
 
