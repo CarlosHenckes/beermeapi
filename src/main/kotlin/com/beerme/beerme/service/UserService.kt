@@ -18,4 +18,8 @@ class UserService {
     fun login(email: String, senha: String) : User? {
         return userRepository.findByEmail(email)
     }
+
+    fun salvar(user: User){
+        userRepository.insert(user)
+    }
 }

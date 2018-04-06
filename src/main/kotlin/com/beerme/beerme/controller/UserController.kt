@@ -3,10 +3,7 @@ package com.beerme.beerme.controller
 import com.beerme.beerme.model.User
 import com.beerme.beerme.service.UserService
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PathVariable
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/user")
@@ -33,6 +30,11 @@ class UserController {
         }
 
         return false
+    }
+
+    @PostMapping
+    fun salvar(@RequestBody user: User){
+        userService.salvar(user)
     }
 
 }
