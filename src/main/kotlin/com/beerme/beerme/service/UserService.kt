@@ -11,6 +11,10 @@ class UserService {
     @Autowired
     lateinit var userRepository: UserRepository
 
+    fun findAllUsers(): List<User>?{
+        return userRepository.findAll()
+    }
+
     fun login(email: String, senha: String) : User? {
         return userRepository.findByEmailContaining(email)
     }

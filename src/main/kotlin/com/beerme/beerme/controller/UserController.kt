@@ -15,6 +15,11 @@ class UserController {
     @Autowired
     lateinit var userService : UserService
 
+    @GetMapping
+    fun getAllUsers() :List<User>?{
+        return userService.findAllUsers()
+    }
+
     @GetMapping("/email/{email}/senha/{senha}")
     fun login(@PathVariable(value = "email") email: String,
                 @PathVariable(value = "senha") senha: String) : User?{
