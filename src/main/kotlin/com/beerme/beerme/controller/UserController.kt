@@ -14,10 +14,10 @@ class UserController {
     @Autowired
     lateinit var userService : UserService
 
-    /*@GetMapping("/email/{email}/senha/{senha}")
+    @GetMapping("/email/{email}/senha/{senha}")
     fun login(@PathVariable(value = "email") email: String,
                 @PathVariable(value = "senha") senha: String) : Boolean{
-        return userService.login(email, senha)
-    }*/
+        return true     //userService.login(email, senha)
+    }
 
 }
