@@ -13,11 +13,10 @@ class UserService {
 
     fun login(email: String, senha: String) : Boolean {
         var user: User? = userRepository.findByEmailContaining(email)
-        /*if (user == null)
-            return false
-        else (user.senha.contains(senha))
-            return true
-        return false*/
-        return true
+
+        if (user != null) {
+                    return true
+                }
+        return false
     }
 }
