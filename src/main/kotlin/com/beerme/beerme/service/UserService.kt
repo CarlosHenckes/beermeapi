@@ -11,12 +11,12 @@ class UserService {
     @Autowired
     lateinit var userRepository: UserRepository
 
-    fun login(email: String, senha: String) : Boolean {
-        var user: User? = userRepository.findByEmailContaining(email)
+    fun login(email: String, senha: String) : String {
+        var user = userRepository.findByEmailContaining(email)
 
-        if (user != null) {
+        /*if (user != null) {
                     return true
-                }
-        return false
+                }*/
+        return user.toString()
     }
 }
