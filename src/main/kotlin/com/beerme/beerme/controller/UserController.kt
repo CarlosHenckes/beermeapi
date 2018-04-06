@@ -1,5 +1,6 @@
 package com.beerme.beerme.controller
 
+import com.beerme.beerme.model.User
 import com.beerme.beerme.service.UserService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.GetMapping
@@ -16,7 +17,7 @@ class UserController {
 
     @GetMapping("/email/{email}/senha/{senha}")
     fun login(@PathVariable(value = "email") email: String,
-                @PathVariable(value = "senha") senha: String) : String{
+                @PathVariable(value = "senha") senha: String) : User?{
         return userService.login(email, senha)
     }
 
