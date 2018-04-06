@@ -23,10 +23,13 @@ class UserController {
     @GetMapping("/email/{email}/senha/{senha}")
     fun login(@PathVariable(value = "email") email: String,
                 @PathVariable(value = "senha") senha: String) : Boolean{
-        var user: User? = userService.login(email, senha)
+        val user: User? = userService.login(email, senha)
 
         if (user != null){
-            return true
+            if (user.senha.equals(senha)){
+                return true
+            }
+            return false
         }
 
         return false
