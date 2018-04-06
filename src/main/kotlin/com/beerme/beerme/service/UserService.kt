@@ -16,6 +16,6 @@ class UserService {
     }
 
     fun login(email: String, senha: String) : User? {
-        return userRepository.findByEmailContaining(email)
+        return userRepository.findByEmail(email)
     }
 }
