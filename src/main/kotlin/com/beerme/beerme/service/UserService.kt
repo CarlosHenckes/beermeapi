@@ -18,5 +18,6 @@ class UserService {
         else (user.senha.contains(senha))
             return true
         return false*/
+        return true
     }
 }
