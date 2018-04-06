@@ -26,7 +26,7 @@ class BeerService {
     }
 
     fun atualizar(beer: Beer){
-        beerRepository.insert(beer)
+        beerRepository.save(beer)
     }
 
     fun pesquisarPorRotulo(rotulo: String) : List<Beer>?{
