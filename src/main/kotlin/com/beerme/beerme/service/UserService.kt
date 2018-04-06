@@ -12,8 +12,8 @@ class UserService {
     lateinit var userRepository: UserRepository
 
     fun login(email: String, senha: String) : Boolean {
-        /*val user: User? = userRepository.findByEmailContaining(email)
-        if (user == null)
+        var user: User? = userRepository.findByEmailContaining(email)
+        /*if (user == null)
             return false
         else (user.senha.contains(senha))
             return true
