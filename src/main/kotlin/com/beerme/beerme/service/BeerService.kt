@@ -30,6 +30,6 @@ class BeerService {
     }
 
     fun pesquisarPorRotulo(rotulo: String) : List<Beer>?{
-        return beerRepository.findByRotuloContaining(rotulo)
+        return beerRepository.findByRotuloContainingIgnoreCase(rotulo)
     }
 }
