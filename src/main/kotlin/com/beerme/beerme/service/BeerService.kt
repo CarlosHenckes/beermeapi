@@ -14,7 +14,7 @@ class BeerService {
     fun buscarTodasCervejas() : List<Beer>{
         /*val beer: List<Beer> = arrayListOf()
         return beer*/
-        return beerRepository.findAll()
+        return beerRepository.findAllOrderByIdDesc()
     }
 
     fun salvar(beer: Beer){
