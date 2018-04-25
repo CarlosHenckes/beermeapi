@@ -12,9 +12,7 @@ class BeerService {
     lateinit var beerRepository: BeerRepository
 
     fun buscarTodasCervejas() : List<Beer>{
-        /*val beer: List<Beer> = arrayListOf()
-        return beer*/
-        return beerRepository.findAllOrderByIdDesc()
+        return beerRepository.findAllByOrderByIdDesc()
     }
 
     fun salvar(beer: Beer){
