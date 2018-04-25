@@ -7,4 +7,6 @@ import org.springframework.stereotype.Repository
 @Repository
 interface BeerRepository: MongoRepository<Beer, String> {
     fun findByRotuloContainingIgnoreCase(rotulo: String): List<Beer>?
+    
+    fun findAllByOrderByRotuloAsc(): List<Beer>?
 }
